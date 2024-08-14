@@ -8,8 +8,14 @@ public class Cycling extends OlympicSport {
         this.typeOfCompetition = typeOfCompetition;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("In BMX, competitors have two one-minute runs over various obstacles.");
+    }
+
+    @Override
+    public String toString() {
+        return this.typeOfCompetition + " cycling";
     }
 
     public String getTypeOfCompetition() {

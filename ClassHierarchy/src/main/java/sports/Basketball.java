@@ -9,6 +9,7 @@ public class Basketball extends OlympicSport {
         this.typeOfGame = typeOfGame;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("In 5X5, the team have to shoot within 24 seconds of getting the ball.");
     }

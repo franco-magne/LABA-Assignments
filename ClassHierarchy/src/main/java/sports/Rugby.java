@@ -9,6 +9,7 @@ public class Rugby extends OlympicSport {
         this.sustitutionQuantityPerTeam = sustitutionQuantityPerTeam;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("The ball is oval and can only be passed backwards.");
     }

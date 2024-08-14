@@ -11,6 +11,7 @@ public class Tennis extends OlympicSport {
         this.numberOfSets = numberOfSets;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("The topspin or backspin movement alter the ball's flight.");
     }

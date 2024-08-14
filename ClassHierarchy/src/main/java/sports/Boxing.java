@@ -9,8 +9,14 @@ public class Boxing extends OlympicSport {
         this.weightCategoryInKg = weightCategoryInKg;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("Men must wear mouthguards and gloves. Women must also wear headguards.");
+    }
+
+    @Override
+    public int hashCode() {
+        return this.weightCategoryInKg * 1000; // category in grams
     }
 
     public int getWeightCategoryInKg() {

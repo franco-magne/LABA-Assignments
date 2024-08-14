@@ -9,6 +9,7 @@ public class Golf extends OlympicSport {
         this.amountOfHoles = amountOfHoles;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("The scores names are birdie, eagle and bogey.");
     }

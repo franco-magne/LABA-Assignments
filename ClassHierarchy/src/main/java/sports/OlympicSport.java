@@ -1,11 +1,11 @@
 package sports;
 
-public class OlympicSport {
-    private String name;
-    private int amountOfPlayers;
-    private int gameDurationInMinutes;
-    private String terrainType;
-    private boolean isTeamGame;
+public abstract class OlympicSport {
+    protected String name;
+    protected int amountOfPlayers;
+    protected int gameDurationInMinutes;
+    protected String terrainType;
+    protected boolean isTeamGame;
 
     public OlympicSport() {    }
 
@@ -24,9 +24,7 @@ public class OlympicSport {
     }
 
     // Child classes implement overriding examples of this method
-    public void someRulesToKnow() {
-        System.out.println("Some basics rules you should know...");
-    }
+    public abstract void someRulesToKnow();
 
     public String getName() {
         return name;

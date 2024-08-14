@@ -9,6 +9,7 @@ public class Football extends OlympicSport {
         this.sustitutionQuantityPerTeam = sustitutionQuantityPerTeam;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("The outfield players can't use their hands and arms to play.");
     }

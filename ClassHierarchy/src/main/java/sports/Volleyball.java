@@ -9,6 +9,7 @@ public class Volleyball extends OlympicSport {
         this.sustitutionQuantityPerTeam = sustitutionQuantityPerTeam;
     }
 
+    @Override
     public void someRulesToKnow() {
         System.out.println("The teams cannot use more than three touches to score a point.");
     }
