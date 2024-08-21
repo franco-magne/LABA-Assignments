@@ -1,11 +1,13 @@
 package sports;
 
 public class Weightlifting extends OlympicSport {
+    public static int weightCategoriesQuantity = 0;
     private int weightCategoryInKg;
 
     public Weightlifting(String name, boolean isTeamGame, int weightCategoryInKg) {
         super(name, isTeamGame);
         this.weightCategoryInKg = weightCategoryInKg;
+        weightCategoriesQuantity++;
     }
 
     @Override

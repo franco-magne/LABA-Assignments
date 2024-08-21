@@ -1,6 +1,7 @@
 package sports;
 
 public class Tennis extends OlympicSport {
+    public static final int MAX_NUMBER_OF_SETS = 5;
     private String typeOfEvent; // singles or doubles
     private int numberOfSets;
 

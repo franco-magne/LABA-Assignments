@@ -1,7 +1,10 @@
 package sports;
 
-public class Boxing extends OlympicSport {
+import java.util.List;
+
+public class Boxing extends OlympicSport implements Equipable {
     private int weightCategoryInKg;
+    private List<String> equipments;
 
     public Boxing(String name, int amountOfPlayers, int gameDurationInMinutes, String terrainType, boolean isTeamGame,
                   int weightCategoryInKg) {
@@ -19,6 +22,16 @@ public class Boxing extends OlympicSport {
         return this.weightCategoryInKg * 1000; // category in grams
     }
 
+    @Override
+    public void equip(String equipment) {
+        this.equipments.add(equipment);
+    }
+
+    @Override
+    public void unequip(String equipment) {
+        this.equipments.remove(equipment);
+    }
+
     public int getWeightCategoryInKg() {
         return weightCategoryInKg;
     }
@@ -26,4 +39,5 @@ public class Boxing extends OlympicSport {
     public void setWeightCategoryInKg(int weightCategoryInKg) {
         this.weightCategoryInKg = weightCategoryInKg;
     }
+
 }

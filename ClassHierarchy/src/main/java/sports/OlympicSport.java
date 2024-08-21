@@ -26,6 +26,16 @@ public abstract class OlympicSport {
     // Child classes implement overriding examples of this method
     public abstract void someRulesToKnow();
 
+    public final void showSchedule() {
+        System.out.println("1) Monday: Archery & Cycling");
+        System.out.println("2) Tuesday: Basketball");
+        System.out.println("3) Wednesday: Football");
+        System.out.println("4) Thursday: Weightlifting & Boxing");
+        System.out.println("5) Friday: Tennis");
+        System.out.println("6) Saturday: Volleyball & Rugby");
+        System.out.println("7) Sunday: Golf");
+    }
+
     public String getName() {
         return name;
     }
