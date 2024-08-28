@@ -1,13 +1,12 @@
 # LABA-Assigments
 
-##### Assignment 4
+##### Assignment 5
 
-- New interfaces: Competable, Equipable, Regulatable, Timeable, Trainable
-- Polymorphism with abstract class: done in previous assignment
-- Polymorphism with interface: in Equipable 
-- final Class: OlympicCommittee
-- final method: in OlympicSport
-- final variable: in Tennis class
-- static block: in OlympicCommittee
-- static method: in OlympicCommittee
-- static variable: in Boxing class
+I changed the domain I was working on.
+
+Look at:
+- Exceptions classes: InsufficientMagicException, InvalidUpgradeException, InvalidPathException, ObjectNotFoundException, BlockedDifficultyException
+- Exceptions in 2 ways: useMagicAttack method in Kratos class & MagicAttack class; upgradeWeapon method in Weapon class & WeaponUpgrade class
+- try with resources en GameConfiguration class
+
+log4J not implemented yet.
