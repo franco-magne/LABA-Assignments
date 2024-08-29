@@ -1,6 +1,10 @@
 package relics;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class GoldenFleece extends Relic {
+    private static final Logger logger = LogManager.getLogger(Relic.class);
 
     public GoldenFleece(String name) {
         super(name);
@@ -8,12 +12,12 @@ public class GoldenFleece extends Relic {
 
     @Override
     public void showDescription() {
-        System.out.println("The fleece allows Kratos to reflect any projectiles, beams, and attacks.");
+        logger.info("The fleece allows Kratos to reflect any projectiles, beams, and attacks.");
     }
 
     @Override
     public void interact() {
-        System.out.println("Ready to block enemy attacks.");
+        logger.info("Ready to block enemy attacks.");
     }
 
     @Override

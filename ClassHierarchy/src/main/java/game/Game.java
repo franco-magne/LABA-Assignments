@@ -2,24 +2,25 @@ package game;
 
 import chapters.Chapter;
 import difficulty.Difficulty;
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public final class Game {
     private final int idGame;
     private Difficulty difficulty;
-    private ArrayList<Chapter> chaptersUnlocked;
+    private Set<Chapter> chaptersUnlocked;
     private double globalProgress;
     private String gameStatus; // PLAYING or FINISH or STOPPED
 
-    public Game(int idGame, Difficulty difficulty, ArrayList<Chapter> chaptersUnlocked, double globalProgress, String gameStatus) {
+    public Game(int idGame, Difficulty difficulty, double globalProgress, String gameStatus) {
         this.idGame = idGame;
         this.difficulty = difficulty;
-        this.chaptersUnlocked = chaptersUnlocked;
+        this.chaptersUnlocked = new HashSet<>();
         this.globalProgress = globalProgress;
         this.gameStatus = gameStatus;
     }
 
-    public void addOrbCosts(Chapter chapter) {
+    public void addChapter(Chapter chapter) {
         this.chaptersUnlocked.add(chapter);
     }
 
@@ -46,11 +47,11 @@ public final class Game {
         this.difficulty = difficulty;
     }
 
-    public ArrayList<Chapter> getChaptersUnlocked() {
+    public Set<Chapter> getChaptersUnlocked() {
         return chaptersUnlocked;
     }
 
-    public void setChaptersUnlocked(ArrayList<Chapter> chaptersUnlocked) {
+    public void setChaptersUnlocked(Set<Chapter> chaptersUnlocked) {
         this.chaptersUnlocked = chaptersUnlocked;
     }
 

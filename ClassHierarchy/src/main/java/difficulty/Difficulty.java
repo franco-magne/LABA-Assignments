@@ -1,8 +1,13 @@
 package difficulty;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Difficulty {
     protected String label;
     protected int damageMultiplier;
+
+    private static final Logger logger = LogManager.getLogger(Difficulty.class);
 
     public Difficulty(String label, int damageMultiplier) {
         this.label = label;
@@ -12,16 +17,16 @@ public class Difficulty {
     public static void getUnderstandableDifficulty(Difficulty dif) {
         switch (dif.getLabel()) {
             case "Spartan":
-                System.out.println("EASY");
+                logger.info("EASY");
                 break;
             case "God":
-                System.out.println("MEDIUM");
+                logger.info("MEDIUM");
                 break;
             case "Titan":
-                System.out.println("HARD");
+                logger.info("HARD");
                 break;
             case "Chaos":
-                System.out.println("VERY HARD");
+                logger.info("VERY HARD");
                 break;
         }
     }

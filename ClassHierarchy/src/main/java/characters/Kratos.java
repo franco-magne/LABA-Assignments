@@ -4,15 +4,15 @@ import itemmagic.InsufficientMagicException;
 import itemmagic.ItemMagic;
 import itemmagic.MagicAttack;
 import weapons.Weapon;
-
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Kratos extends Character {
     private int magicBar;
     private int itemBar;
-    private ArrayList<Weapon> weaponsEquipped;
-    private ArrayList<ItemMagic> magicsEquipped;
-    private ArrayList<ItemMagic> itemsEquipped;
+    private Set<Weapon> weaponsEquipped;
+    private Set<ItemMagic> magicsEquipped;
+    private Set<ItemMagic> itemsEquipped;
 
     public Kratos(String name, int healthBar, String type) {
         super(name, healthBar, type);
@@ -22,9 +22,9 @@ public class Kratos extends Character {
         super(name, healthBar, type);
         this.magicBar = magicBar;
         this.itemBar = itemBar;
-        this.weaponsEquipped = new ArrayList<>();
-        this.magicsEquipped = new ArrayList<>();
-        this.itemsEquipped = new ArrayList<>();
+        this.weaponsEquipped = new HashSet<>();
+        this.magicsEquipped = new HashSet<>();
+        this.itemsEquipped = new HashSet<>();
     }
 
     public void useMagicAttack(ItemMagic magic) {
@@ -66,27 +66,27 @@ public class Kratos extends Character {
         this.itemBar = itemBar;
     }
 
-    public ArrayList<ItemMagic> getMagicsEquipped() {
+    public Set<ItemMagic> getMagicsEquipped() {
         return magicsEquipped;
     }
 
-    public void setMagicsEquipped(ArrayList<ItemMagic> magicsEquipped) {
+    public void setMagicsEquipped(Set<ItemMagic> magicsEquipped) {
         this.magicsEquipped = magicsEquipped;
     }
 
-    public ArrayList<ItemMagic> getItemsEquipped() {
+    public Set<ItemMagic> getItemsEquipped() {
         return itemsEquipped;
     }
 
-    public void setItemsEquipped(ArrayList<ItemMagic> itemsEquipped) {
+    public void setItemsEquipped(Set<ItemMagic> itemsEquipped) {
         this.itemsEquipped = itemsEquipped;
     }
 
-    public ArrayList<Weapon> getWeaponsEquipped() {
+    public Set<Weapon> getWeaponsEquipped() {
         return weaponsEquipped;
     }
 
-    public void setWeaponsEquipped(ArrayList<Weapon> weaponsEquipped) {
+    public void setWeaponsEquipped(Set<Weapon> weaponsEquipped) {
         this.weaponsEquipped = weaponsEquipped;
     }
 }

@@ -23,7 +23,7 @@ public class Weapon {
     }
 
     public void upgradeWeapon(Weapon weaponToUpgrade, int newLevel) {
-        WeaponUpgrade wu = new WeaponUpgrade(weaponToUpgrade, newLevel);
+        WeaponUpgrade wu = new WeaponUpgrade();
 
         try {
             wu.upgradeWeapon(weaponToUpgrade, newLevel);
