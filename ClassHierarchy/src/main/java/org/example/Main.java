@@ -9,7 +9,9 @@ public class Main {
         Difficulty easy = new Difficulty("Spartan", 1);
         Game firstGame = new Game(1, easy, 0, "PLAYING");
 
-        Difficulty.getUnderstandableDifficulty(easy);
+        // Difficulty.getUnderstandableDifficulty(easy);
+
+        TextFilesOperator.calculateNumberOfUniqueWords("logs/profiles.txt");
 
     }
 }

@@ -1,5 +1,10 @@
 # LABA-Assigments
 
+##### Assignment 7
+
+Assignment done in TextFilesOperator class with a static method. I added the dependencies for StringUtils and FileUtils at pom.xml and a profiles.txt was created in the logs directory.
+
+
 ##### Assignment 6
 
 - Add 5 collections to the hierarchy. 
