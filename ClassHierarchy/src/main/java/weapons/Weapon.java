@@ -2,6 +2,7 @@ package weapons;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BiPredicate;
 
 public class Weapon {
     private String name;
@@ -34,6 +35,12 @@ public class Weapon {
 
     public void addPowerMultiplier(int powerMultiplier) {
         this.powerMultiplier.add(powerMultiplier);
+    }
+
+    public boolean weaponIsAtItsMaxLevel(int currentLevel, int maxLevel) {
+        BiPredicate<Integer, Integer> weaponLevelIsMax = Integer::equals; // (a, b) -> a.equals(b)
+
+        return weaponLevelIsMax.test(currentLevel, maxLevel);
     }
 
     public String getName() {

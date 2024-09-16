@@ -1,15 +1,17 @@
 package org.example;
 
 import difficulty.Difficulty;
+import difficulty.GameDifficulty;
 import game.Game;
+import game.GameStatus;
 
 public class Main {
     public static void main(String[] args) {
 
-        Difficulty easy = new Difficulty("Spartan", 1);
-        Game firstGame = new Game(1, easy, 0, "PLAYING");
+        Difficulty easy = new Difficulty(GameDifficulty.SPARTAN, 1);
+        Game firstGame = new Game(1, easy, 0, GameStatus.PLAYING);
 
-        // Difficulty.getUnderstandableDifficulty(easy);
+        Difficulty.getLogger().info(easy.getLabel().getName());
 
         TextFilesOperator.calculateNumberOfUniqueWords("logs/profiles.txt");
 

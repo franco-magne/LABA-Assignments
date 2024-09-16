@@ -1,5 +1,7 @@
 package chapters;
 
+import java.util.function.Predicate;
+
 public class Chapter {
     private String name;
     private int numberOfKinematics;
@@ -18,10 +20,27 @@ public class Chapter {
     }
 
     public final double calculateChapterProgress() {
-        if (totalCheckpoints == reachedCheckpoints) {
-            return 100.0;
-        }
-        return ((reachedCheckpoints * 100) / (double) totalCheckpoints);
+        ProgressCalculator<Integer, Integer, Double> chapterProgress = (Integer a, Integer b) -> (a * 100) / Double.valueOf(b);
+
+        return chapterProgress.calculate(this.reachedCheckpoints, this.totalCheckpoints);
+    }
+
+    public boolean isChapterFinished(int reachedCheckpoints) {
+        Predicate<Integer> chapterCheckpointsProgress = a -> a == this.totalCheckpoints;
+
+        return chapterCheckpointsProgress.test(reachedCheckpoints);
+    }
+
+    public boolean halfCheckpointsHaveBeenReached(int reachedCheckpoints) {
+        Predicate<Integer> checkpointsReached = a -> a > (totalCheckpoints / 2);
+
+        return checkpointsReached.test(reachedCheckpoints);
+    }
+
+    public boolean allKinematicsHaveBeenPlayed(int numberOfKinematicsPlayed) {
+        Predicate<Integer> kinematicsPlayed = a -> a == this.numberOfKinematics;
+
+        return kinematicsPlayed.test(numberOfKinematicsPlayed);
     }
 
     public String getName() {
@@ -40,7 +59,7 @@ public class Chapter {
         this.numberOfKinematics = numberOfKinematics;
     }
 
-    public boolean isHasBossBattle() {
+    public boolean getHasBossBattle() {
         return hasBossBattle;
     }
 
@@ -55,7 +74,6 @@ public class Chapter {
     public void setProgressCompleted(double progressCompleted) {
         this.progressCompleted = progressCompleted;
     }
-
 
     public int getTotalCheckpoints() {
         return totalCheckpoints;

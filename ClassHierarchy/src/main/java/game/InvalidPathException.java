@@ -10,4 +10,8 @@ public class InvalidPathException extends Exception {
     public String informWrongPath() {
         return "The path typed was not found.";
     }
+
+    public String getWrongPath() {
+        return wrongPath;
+    }
 }

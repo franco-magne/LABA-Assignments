@@ -10,9 +10,9 @@ public class ItemMagic {
     private int costOfBar;
     private List<Integer> orbCosts;
     private List<Integer> powerMultiplier;
-    private String type; // ITEM or MAGIC
+    private ItemType type;
 
-    public ItemMagic(String name, int level, int damage, int costOfBar, String type) {
+    public ItemMagic(String name, int level, int damage, int costOfBar, ItemType type) {
         this.name = name;
         this.level = level;
         this.damage = damage;
@@ -62,11 +62,11 @@ public class ItemMagic {
         this.costOfBar = costOfBar;
     }
 
-    public String getType() {
+    public ItemType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(ItemType type) {
         this.type = type;
     }
 

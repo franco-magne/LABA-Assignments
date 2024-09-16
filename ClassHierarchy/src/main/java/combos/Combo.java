@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class Combo {
     private String name;
-    private List<String> buttonsCombo;
+    private List<ControllerButtons> buttonsCombo;
     private int level;
 
     public Combo(String name, int level) {
@@ -14,7 +14,13 @@ public abstract class Combo {
         this.level = level;
     }
 
-    public void addButtonCombo(String combo) {
+    public String levelThisComboIsUnblocked(int currentLevel) {
+        ComboLevelInformer<Integer, String> combo = (Integer a) -> "The " + name + " is a level " + level + " combo";
+
+        return combo.inform(currentLevel);
+    }
+
+    public void addButtonCombo(ControllerButtons combo) {
         this.buttonsCombo.add(combo);
     }
 
@@ -26,11 +32,11 @@ public abstract class Combo {
         this.name = name;
     }
 
-    public List<String> getButtonsCombo() {
+    public List<ControllerButtons> getButtonsCombo() {
         return buttonsCombo;
     }
 
-    public void setButtonsCombo(List<String> buttonsCombo) {
+    public void setButtonsCombo(List<ControllerButtons> buttonsCombo) {
         this.buttonsCombo = buttonsCombo;
     }
 

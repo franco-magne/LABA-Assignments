@@ -3,15 +3,15 @@ package characters;
 public class Character {
     private String name;
     private int healthBar;
-    private String type; // PLAYABLE or BOSS or ORDINARY_ENEMY
+    private CharacterType type;
 
-    public Character(String name, int healthBar, String type) {
+    public Character(String name, int healthBar, CharacterType type) {
         this.name = name;
         this.healthBar = healthBar;
         this.type = type;
     }
 
-    public Character(String name, String type) {
+    public Character(String name, CharacterType type) {
         this.name = name;
         this.type = type;
     }
@@ -32,11 +32,11 @@ public class Character {
         this.healthBar = healthBar;
     }
 
-    public String getType() {
+    public CharacterType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(CharacterType type) {
         this.type = type;
     }
 }

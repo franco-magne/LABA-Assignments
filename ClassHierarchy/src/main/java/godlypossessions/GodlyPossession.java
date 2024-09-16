@@ -1,5 +1,7 @@
 package godlypossessions;
 
+import java.util.function.Predicate;
+
 public class GodlyPossession {
     private String name;
     private String locatedIn;
@@ -13,6 +15,12 @@ public class GodlyPossession {
         this.wasFound = wasFound;
         this.isActivated = isActivated;
         totalFound++;
+    }
+
+    public boolean allGodlyPossessionsWereFound(int total) {
+        Predicate<Integer> wereAllFound = t -> t == 10; // total 10 in the game
+
+        return wereAllFound.test(total);
     }
 
     @Override

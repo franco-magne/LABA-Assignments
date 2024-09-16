@@ -14,11 +14,11 @@ public class Kratos extends Character {
     private Set<ItemMagic> magicsEquipped;
     private Set<ItemMagic> itemsEquipped;
 
-    public Kratos(String name, int healthBar, String type) {
+    public Kratos(String name, int healthBar, CharacterType type) {
         super(name, healthBar, type);
     }
 
-    public Kratos(String name, int healthBar, String type, int magicBar, int itemBar) {
+    public Kratos(String name, int healthBar, CharacterType type, int magicBar, int itemBar) {
         super(name, healthBar, type);
         this.magicBar = magicBar;
         this.itemBar = itemBar;

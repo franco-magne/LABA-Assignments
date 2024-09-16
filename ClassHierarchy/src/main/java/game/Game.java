@@ -1,6 +1,7 @@
 package game;
 
 import chapters.Chapter;
+import chapters.ProgressCalculator;
 import difficulty.Difficulty;
 import java.util.HashSet;
 import java.util.Set;
@@ -10,9 +11,9 @@ public final class Game {
     private Difficulty difficulty;
     private Set<Chapter> chaptersUnlocked;
     private double globalProgress;
-    private String gameStatus; // PLAYING or FINISH or STOPPED
+    private GameStatus gameStatus;
 
-    public Game(int idGame, Difficulty difficulty, double globalProgress, String gameStatus) {
+    public Game(int idGame, Difficulty difficulty, double globalProgress, GameStatus gameStatus) {
         this.idGame = idGame;
         this.difficulty = difficulty;
         this.chaptersUnlocked = new HashSet<>();
@@ -24,6 +25,13 @@ public final class Game {
         this.chaptersUnlocked.add(chapter);
     }
 
+    public double calculateGameProgress() {
+        int totalChapters = 29;
+        ProgressCalculator<Integer, Integer, Double> gameProgress = (Integer a, Integer b) -> (a * 100) / (double) b;
+
+        return gameProgress.calculate(chaptersUnlocked.size(), totalChapters);
+    }
+
     @Override
     public int hashCode() {
         return this.idGame; // the ID once assigned, cannot be modified. The ID is unique, like the hashCode
@@ -31,12 +39,15 @@ public final class Game {
 
     @Override
     public boolean equals(Object o) {
-        boolean value;
+        if (this == o) {
+            return true; // If is the same object
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false; // If the object is null or another class
+        }
         Game auxGame = (Game) o;
 
-        value = this.idGame == auxGame.hashCode();
-
-        return value;
+        return this.idGame == auxGame.hashCode();
     }
 
     public Difficulty getDifficulty() {
@@ -63,11 +74,11 @@ public final class Game {
         this.globalProgress = globalProgress;
     }
 
-    public String getGameStatus() {
+    public GameStatus getGameStatus() {
         return gameStatus;
     }
 
-    public void setGameStatus(String gameStatus) {
+    public void setGameStatus(GameStatus gameStatus) {
         this.gameStatus = gameStatus;
     }
 }

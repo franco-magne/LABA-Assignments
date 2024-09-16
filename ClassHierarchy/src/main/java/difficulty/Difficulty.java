@@ -4,38 +4,38 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class Difficulty {
-    protected String label;
+    protected GameDifficulty label;
     protected int damageMultiplier;
 
     private static final Logger logger = LogManager.getLogger(Difficulty.class);
 
-    public Difficulty(String label, int damageMultiplier) {
+    public Difficulty(GameDifficulty label, int damageMultiplier) {
         this.label = label;
         this.damageMultiplier = damageMultiplier;
     }
 
     public static void getUnderstandableDifficulty(Difficulty dif) {
         switch (dif.getLabel()) {
-            case "Spartan":
+            case SPARTAN:
                 logger.info("EASY");
                 break;
-            case "God":
+            case GOD:
                 logger.info("MEDIUM");
                 break;
-            case "Titan":
+            case TITAN:
                 logger.info("HARD");
                 break;
-            case "Chaos":
+            case CHAOS:
                 logger.info("VERY HARD");
                 break;
         }
     }
 
-    public String getLabel() {
+    public GameDifficulty getLabel() {
         return label;
     }
 
-    public void setLabel(String label) {
+    public void setLabel(GameDifficulty label) {
         this.label = label;
     }
 
@@ -45,5 +45,9 @@ public class Difficulty {
 
     public void setDamageMultiplier(int damageMultiplier) {
         this.damageMultiplier = damageMultiplier;
+    }
+
+    public static Logger getLogger() {
+        return logger;
     }
 }

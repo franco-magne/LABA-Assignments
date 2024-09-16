@@ -3,11 +3,11 @@ package difficulty;
 public class Chaos extends Difficulty {
     protected boolean isUnblocked;
 
-    public Chaos(String label, int damageMultiplier) {
+    public Chaos(GameDifficulty label, int damageMultiplier) {
         super(label, damageMultiplier);
     }
 
-    public Chaos(String label, int damageMultiplier, boolean isUnblocked) {
+    public Chaos(GameDifficulty label, int damageMultiplier, boolean isUnblocked) {
         super(label, damageMultiplier);
         this.isUnblocked = isUnblocked;
     }
