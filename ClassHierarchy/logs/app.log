@@ -1,5 +1,64 @@
 2024-08-29 16:23:37 [main] INFO  difficulty.Difficulty - EASY
-2024-08-29 16:29:17 [main] INFO  difficulty.Difficulty - EASY
-2024-08-29 16:51:13 [main] INFO  difficulty.Difficulty - EASY
-2024-08-30 19:15:12 [main] INFO  difficulty.Difficulty - EASY
 2024-09-07 02:03:15 [main] INFO  org.example.TextFilesOperator - Repeated words: CREATED PROFILE ON
+2024-09-17 11:20:43 [main] ERROR org.example.ReflectionExample - Class not found. GoldenFleece
+2024-09-17 11:24:15 [main] ERROR org.example.ReflectionExample - Class not found. Golden Fleece
+2024-09-17 11:24:55 [main] ERROR org.example.ReflectionExample - Class not found. Relic
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Class name: relics.GoldenFleece
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Constructor: relics.GoldenFleece
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -       java.lang.String
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -       boolean
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Method: showDescription
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Return type: void
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -       org.apache.logging.log4j.Logger
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Method: interact
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Return type: void
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -       org.apache.logging.log4j.Logger
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Method: isInteractable
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Return type: boolean
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Object created using reflection --> 
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - Class: Golden Fleece
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample - The fleece allows Kratos to reflect any projectiles, beams, and attacks.
+2024-09-17 12:05:07 [main] INFO  org.example.ReflectionExample -
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Class name: relics.GoldenFleece
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Field: name
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Type: class java.lang.String
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Modifier: private
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Field: isEquipped
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Type: boolean
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Modifier: private
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Constructor: relics.GoldenFleece
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -       java.lang.String
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -       boolean
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Method: showDescription
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Return type: void
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -       org.apache.logging.log4j.Logger
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Method: interact
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Return type: void
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -       org.apache.logging.log4j.Logger
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Method: isInteractable
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Return type: boolean
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Modifier: public
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -  > Parameters types: 
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -    
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Object created using reflection... 
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - Class: Golden Fleece
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample - The fleece allows Kratos to reflect any projectiles, beams, and attacks.
+2024-09-17 12:14:25 [main] INFO  org.example.ReflectionExample -    

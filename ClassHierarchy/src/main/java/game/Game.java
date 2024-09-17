@@ -4,7 +4,9 @@ import chapters.Chapter;
 import chapters.ProgressCalculator;
 import difficulty.Difficulty;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public final class Game {
     private final int idGame;
@@ -30,6 +32,20 @@ public final class Game {
         ProgressCalculator<Integer, Integer, Double> gameProgress = (Integer a, Integer b) -> (a * 100) / (double) b;
 
         return gameProgress.calculate(chaptersUnlocked.size(), totalChapters);
+    }
+
+    public List<String> chaptersWithOneHundredProgressCompleted() {
+        return chaptersUnlocked.stream()
+                .filter(chapter -> chapter.getProgressCompleted() == 100.0)
+                .map(Chapter::getName)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> chaptersWithBossBattle() {
+        return chaptersUnlocked.stream()
+                .filter(Chapter::getHasBossBattle)
+                .map(Chapter::getName)
+                .collect(Collectors.toList());
     }
 
     @Override

@@ -3,6 +3,7 @@ package weapons;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiPredicate;
+import java.util.stream.Collectors;
 
 public class Weapon {
     private String name;
@@ -17,6 +18,18 @@ public class Weapon {
         this.damage = damage;
         this.orbCosts = new ArrayList<>();
         this.powerMultiplier = new ArrayList<>();
+    }
+
+    public int totalOrbCostForMaxLevel() {
+        return orbCosts.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+    }
+
+    public List<Integer> weaponDamagePerLevel() {
+        return powerMultiplier.stream()
+                .map(multiplier -> multiplier * damage)
+                .collect(Collectors.toList());
     }
 
     public void addOrbCosts(int orbCost) {

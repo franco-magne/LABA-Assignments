@@ -5,7 +5,9 @@ import itemmagic.ItemMagic;
 import itemmagic.MagicAttack;
 import weapons.Weapon;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Kratos extends Character {
     private int magicBar;
@@ -25,6 +27,20 @@ public class Kratos extends Character {
         this.weaponsEquipped = new HashSet<>();
         this.magicsEquipped = new HashSet<>();
         this.itemsEquipped = new HashSet<>();
+    }
+
+    public List<String> weaponsAtItsMaxLevel() {
+        return weaponsEquipped.stream()
+                .filter(weapon -> weapon.getLevel() == weapon.getOrbCosts().size())
+                .map(Weapon::getName)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> weaponsWithHigherDamageThan(int damage) {
+        return weaponsEquipped.stream()
+                .filter(weapon -> weapon.getDamage() > damage)
+                .map(Weapon::getName)
+                .collect(Collectors.toList());
     }
 
     public void useMagicAttack(ItemMagic magic) {

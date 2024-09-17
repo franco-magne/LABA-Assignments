@@ -2,6 +2,8 @@ package combos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public abstract class Combo {
     private String name;
@@ -12,6 +14,23 @@ public abstract class Combo {
         this.name = name;
         this.buttonsCombo = new ArrayList<>();
         this.level = level;
+    }
+
+    public boolean comboHasThisButton(ControllerButtons passedButton) {
+        return this.buttonsCombo.stream()
+                .anyMatch(button -> button == passedButton);
+    }
+
+    public List<String> stringListOfComboButtonsCombination() {
+        return buttonsCombo.stream()
+                .map(Enum::toString)
+                .collect(Collectors.toList());
+    }
+
+    public boolean comboIsLargerThan(int sizeOfButtons) {
+        Predicate<Integer> comboCombinationLength = a -> buttonsCombo.size() > a;
+
+        return  comboCombinationLength.test(sizeOfButtons);
     }
 
     public String levelThisComboIsUnblocked(int currentLevel) {

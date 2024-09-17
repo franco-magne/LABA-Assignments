@@ -4,6 +4,7 @@ import difficulty.Difficulty;
 import difficulty.GameDifficulty;
 import game.Game;
 import game.GameStatus;
+import relics.GoldenFleece;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,9 +12,9 @@ public class Main {
         Difficulty easy = new Difficulty(GameDifficulty.SPARTAN, 1);
         Game firstGame = new Game(1, easy, 0, GameStatus.PLAYING);
 
-        Difficulty.getLogger().info(easy.getLabel().getName());
+        // TextFilesOperator.calculateNumberOfUniqueWords("logs/profiles.txt");
 
-        TextFilesOperator.calculateNumberOfUniqueWords("logs/profiles.txt");
+        ReflectionExample.testReflection("relics.GoldenFleece");
 
     }
 }
