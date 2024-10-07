@@ -4,7 +4,6 @@ import difficulty.Difficulty;
 import difficulty.GameDifficulty;
 import game.Game;
 import game.GameStatus;
-import relics.GoldenFleece;
 
 public class Main {
     public static void main(String[] args) {
