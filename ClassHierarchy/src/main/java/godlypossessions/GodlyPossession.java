@@ -56,7 +56,7 @@ public class GodlyPossession {
         this.wasFound = wasFound;
     }
 
-    public boolean isActivated() {
+    public boolean getIsActivated() {
         return isActivated;
     }
 

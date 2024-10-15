@@ -12,8 +12,9 @@ public class Main {
         Game firstGame = new Game(1, easy, 0, GameStatus.PLAYING);
 
         // TextFilesOperator.calculateNumberOfUniqueWords("logs/profiles.txt");
+        //ReflectionExample.testReflection("relics.GoldenFleece");
 
-        ReflectionExample.testReflection("relics.GoldenFleece");
+
 
     }
 }
